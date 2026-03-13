@@ -64,14 +64,15 @@ python manage.py runserver
 ```
 The API will be available at: http://127.0.0.1:8000/
 
-## Todo Model Fields
+## ● Todo Model Fields
 As per the challenge requirements, each Todo item includes:
-id: Auto-generated primary key.
-user: ForeignKey linked to the authenticated User.
-title: Character field (max 50).
-description: Text field (max 500).
-isCompleted: Boolean (default False).
-createdAt: Automatically generated timestamp.
+
+* **id**: Auto-generated primary key.
+* **user**: ForeignKey linked to the authenticated User.
+* **title**: Character field (max 50).
+* **description**: Text field (max 500).
+* **isCompleted**: Boolean (default False).
+* **createdAt**: Automatically generated timestamp.
 
 ## List of Endpoints
 All todos/ endpoints require the header: Authorization: Bearer <your_access_token>
