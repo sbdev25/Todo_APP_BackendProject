@@ -92,7 +92,7 @@ This project follows the **Django** standards  architecture.
 
 ### 1. The main directory (`todo_project/`)
 This is the **Project Root**. It serves as the "brain" of the entire application.
-* **`settings.py`**: The most important configuration file. It manages database connections, security keys, installed apps (like REST Framework), and JWT authentication settings.
+* **`settings.py`**: The most important configuration file. It manages database connections, security keys, installed apps , and JWT authentication settings.
 * **`urls.py`**: The main entry point for routing. It tells Django which URL paths lead to which applications.
 
 ### 2. The Application Directory (`todo_app/`)
@@ -100,7 +100,7 @@ This is where the **Business Logic** of the Todo app lives.
 * **`models.py`**: Defines the data structure. It describes exactly what a "Todo" is in the database (title, description, status, etc.).
 * **`serializers.py`**: Acts as a translator. Since a database cannot "speak" JSON, the serializer converts complex Django models into JSON format for the frontend and validates incoming data.
 * **`views.py`**: Contains the actual functions for your endpoints. It handles the logic for creating, updating, and deleting todos while checking user permissions.
-* **`urls.py`**: Contains the specific paths for your API (like `/todos/add/` or `/todos/delete/`).
+* **`urls.py`**: Contains the specific paths for your API .
 
 ### 3. The Environment (`venv/`)
 * This directory contains the **Virtual Environment**. It holds an isolated copy of Python and all the libraries listed in `requirements.txt`. This ensures that the project runs the same way on any computer without interfering with system-wide software.
