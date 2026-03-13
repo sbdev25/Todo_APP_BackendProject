@@ -35,30 +35,30 @@ python --version
 git clone [https://github.com/sbdev25/Todo_APP_BackendProject.git](https://github.com/sbdev25/Todo_APP_BackendProject.git)
 cd Todo_APP_BackendProject
 ```
-###3. Setup Virtual Environment
+### 3. Setup Virtual Environment
 ```bash
 python -m venv venv
 cd venv
 Scripts\activate
 ```
-###4. Install Dependencies
+### 4. Install Dependencies
 ```bash
 cd ..
 pip install -r requirements.txt
 ```
-###5. Database Setup
+### 5. Database Setup
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
-###6. Create an Admin User
+### 6. Create an Admin User
 You must create a superuser for the first time to access the Django dashboard and test the token APIs:
 ```bash
 python manage.py createsuperuser
 ```
 Follow the terminal prompts to set your username and password.
 
-###7. Run the Server
+### 7. Run the Server
 ```bash
 python manage.py runserver
 ```
