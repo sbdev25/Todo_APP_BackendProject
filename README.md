@@ -87,3 +87,26 @@ All todos/ endpoints require the header: Authorization: Bearer <your_access_toke
 | **PUT** | `/todos/edit/<int:pk>/` | Update a specific Todo (Checks ownership). |
 | **DELETE** | `/todos/delete/<int:pk>/` | Delete a specific Todo (Checks ownership). |
 
+
+##  Folder Structure Explanation
+
+This project follows the standard **Django + App** architecture, ensuring a clean separation between project settings and application logic.
+
+### 1. The Core Directory (`todo_project/`)
+This is the **Project Root**. It serves as the "brain" of the entire application.
+* **`settings.py`**: The most important configuration file. It manages database connections, security keys, installed apps (like REST Framework), and JWT authentication settings.
+* **`urls.py`**: The main entry point for routing. It tells Django which URL paths lead to which applications.
+
+### 2. The Application Directory (`todo_app/`)
+This is where the **Business Logic** of the Todo app lives.
+* **`models.py`**: Defines the data structure. It describes exactly what a "Todo" is in the database (title, description, status, etc.).
+* **`serializers.py`**: Acts as a translator. Since a database cannot "speak" JSON, the serializer converts complex Django models into JSON format for the frontend and validates incoming data.
+* **`views.py`**: Contains the actual functions for your endpoints. It handles the logic for creating, updating, and deleting todos while checking user permissions.
+* **`urls.py`**: Contains the specific paths for your API (like `/todos/add/` or `/todos/delete/`).
+
+### 3. The Environment (`venv/`)
+* This directory contains the **Virtual Environment**. It holds an isolated copy of Python and all the libraries listed in `requirements.txt`. This ensures that the project runs the same way on any computer without interfering with system-wide software.
+
+### 4. Management & Dependencies
+* **`manage.py`**: A command-line utility that allows you to interact with the project. You use it to run the server, create users, and sync the database.
+* **`requirements.txt`**: The manifest of all necessary packages. It ensures that any developer can install the exact same versions of Django, DRF, and SimpleJWT that you used.
