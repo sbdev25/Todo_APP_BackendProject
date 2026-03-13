@@ -1,6 +1,6 @@
 #  Todo app 
 
-##  Desription
+##  Description
 This project is  a Backend project. It allows for users to create a todo list  .Each user have his own to do list and that by the jwt authentication wich is json web token .
 
 ### app Features:
