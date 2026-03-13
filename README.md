@@ -1,22 +1,20 @@
-#  Todo API - Backend Challenge
+#  Todo app 
 
-##  Project Description
-This project is a **RESTful API** built for a Todo application as part of a Backend Development challenge. It allows users to manage their daily tasks securely. Each user has their own private list of todos, protected by **JWT (JSON Web Token) authentication**.
+##  Desription
+This project is  a Backend project. It allows for users to create a todo list  .Each user have his own to do list and that by the jwt authentication wich is json web token .
 
-### Main Features:
-* **User Isolation:** Users can only see, edit, or delete the todos they created.
-* **JWT Authentication:** Secure login system using access and refresh tokens.
-* **Full CRUD:** Supports Creating, Reading, Updating, and Deleting tasks.
-* **Standards:** Implements proper HTTP status codes and input validation.
+### app Features:
+* **User permissions:** the users can create , edit and update or delete a todo task in the list 
+* **Json web token auth (jwt) :** ensure secure login in the system using access and refresh tokens 
 
 ---
 
-##  Tech Stack
-* **Language:** Python 3.11+
+##  frameworks and  Stack
+* **Language:** Python 3.11 or higher 
 * **Framework:** Django 5.2.7
 * **API Toolkit:** Django REST Framework (DRF) 3.16.1
 * **Authentication:** SimpleJWT 5.5.1
-* **Database:** SQLite (Default)
+* **Database:** SQLite
 
 ---
 
@@ -32,7 +30,7 @@ python --version
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/sbdev25/Todo_APP_BackendProject.git](https://github.com/sbdev25/Todo_APP_BackendProject.git)
+git clone https://github.com/sbdev25/Todo_APP_BackendProject.git
 cd Todo_APP_BackendProject
 ```
 ### 3. Setup Virtual Environment
@@ -90,9 +88,9 @@ All todos/ endpoints require the header: Authorization: Bearer <your_access_toke
 
 ##  Folder Structure Explanation
 
-This project follows the standard **Django + App** architecture, ensuring a clean separation between project settings and application logic.
+This project follows the **Django** standards  architecture.
 
-### 1. The Core Directory (`todo_project/`)
+### 1. The main directory (`todo_project/`)
 This is the **Project Root**. It serves as the "brain" of the entire application.
 * **`settings.py`**: The most important configuration file. It manages database connections, security keys, installed apps (like REST Framework), and JWT authentication settings.
 * **`urls.py`**: The main entry point for routing. It tells Django which URL paths lead to which applications.
